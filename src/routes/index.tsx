@@ -94,7 +94,7 @@ function PortfolioPage() {
           <div className="about-stage">
             <span className="reticle reticle-one" aria-hidden="true">⊕</span><span className="reticle reticle-two" aria-hidden="true">⊕</span><span className="reticle reticle-three" aria-hidden="true">⊕</span><span className="reticle reticle-four" aria-hidden="true">⊕</span>
             <span className="crosshair crosshair-left" aria-hidden="true" /><span className="crosshair crosshair-right" aria-hidden="true" />
-            <div className="petal-halo" aria-hidden="true">{Array.from({ length: 18 }, (_, index) => <i key={index} style={{ "--petal": index } as React.CSSProperties} />)}</div>
+            <div className="petal-halo" aria-hidden="true" />
             <img className="about-image" src={aboutPortrait} alt="Filmmaker holding a camera in a black-and-white portrait" width={1024} height={1280} loading="lazy" />
             <div className="about-caption"><span>Behind the frame</span><span>01 — 06</span></div>
           </div>
@@ -122,7 +122,7 @@ function PortfolioPage() {
               <span className="exhibition-number">{item.number}</span>
               <h3>{item.title}</h3>
               <p className="exhibition-location">{item.place}<span>{item.date}</span></p>
-              <a href={`mailto:hello@visualpoetry.studio?subject=${encodeURIComponent("Exhibition: " + item.number)}`} className="ticket-link" aria-label={`Enquire about ${item.title.props.children[0]}`}>Enquire <ArrowUpRight size={14} /></a>
+              <a href={`mailto:hello@visualpoetry.studio?subject=${encodeURIComponent("Exhibition " + item.number)}`} className="ticket-link" aria-label={`Enquire about exhibition ${item.number}`}>Enquire <ArrowUpRight size={14} /></a>
             </article>)}
           </div>
         </section>
